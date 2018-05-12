@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    class BigPlane
+    class BigPlane : Airplane
     {
-        static private int capacity = 300;
-        static private double maxDistans = 1500d;
+        public BigPlane(string name, int id)
+        {
+            this.Name = name;
+            this.Id = id;
+            this.MaxDistans = 1500d;
+            this.Capacity = 300;
+        }
     }
 }

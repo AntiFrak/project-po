@@ -8,9 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>AirPlaneSystem</RootNamespace>
     <AssemblyName>AirPlaneSystem</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,10 +46,10 @@
     <Compile Include="Airplane.cs" />
     <Compile Include="Airport.cs" />
     <Compile Include="BigPlane.cs" />
-    <Compile Include="Clients.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="Company.cs" />
+    <Compile Include="Flight.cs" />
     <Compile Include="FlightAgent.cs" />
-    <Compile Include="Flights.cs" />
     <Compile Include="MediumPlane.cs" />
     <Compile Include="PrivatePerson.cs" />
     <Compile Include="Program.cs" />

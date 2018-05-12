@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    class PrivatePerson
+    class PrivatePerson : Client
     {
+        private string Name
+        {
+            get;
+        }
+        private string Surname
+        {
+            get;
+        }
+        private string Pesel
+        {
+            get;
+        }
+        public PrivatePerson(string name, string surname, string pesel)
+        {
+            Name = name;
+            Surname = surname;
+            Pesel = pesel;
+        }
     }
 }

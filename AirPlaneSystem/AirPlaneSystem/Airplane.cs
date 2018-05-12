@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    abstract class Airplane
+    abstract class Airplane : Company
     {
         protected string Name
         {

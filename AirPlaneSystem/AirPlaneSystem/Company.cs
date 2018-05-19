@@ -31,11 +31,24 @@ namespace AirPlaneSystem
             return airports;
         }
 
-        public void AddAirplane(string name, int id)
+        public void AddAirplane(string name, int id, int type)
         {
-            //Airplanes.Add(new BigPlane(name, id));
-            //Airplanes.Add(new MediumPlane(name, id));
-            //Airplanes.Add(new SmallPlane(name, id));
+            switch (type) // choise a type of airplane
+            {
+                case 1:
+                    airplanes.Add(new BigPlane(name, id));
+                    break;
+                case 2:
+                    airplanes.Add(new MediumPlane(name, id));
+                    break;
+                case 3:
+                    airplanes.Add(new SmallPlane(name, id));
+                    break;
+                default:
+                    Console.WriteLine("Unknown airplane type!!!");
+                    break;
+            }
+
         }
         public void RemoveAirplane(int i)
         {
@@ -45,15 +58,48 @@ namespace AirPlaneSystem
         {
             return airplanes[i];
         }
+        public List<Airplane> GetAllBigAirplanes()
+        {
+            List<Airplane> bigAirplanes = new List<Airplane>();
+            foreach (Airplane a in airplanes)
+            {
+                if (a is BigPlane)
+                    bigAirplanes.Add(a);
+            }
+            return bigAirplanes;
+        }
+        public List<Airplane> GetAllMediumAirplanes()
+        {
+            List<Airplane> mediumAirplanes = new List<Airplane>();
+            foreach (Airplane a in airplanes)
+            {
+                if (a is MediumPlane)
+                    mediumAirplanes.Add(a);
+            }
+            return mediumAirplanes;
+        }
+        public List<Airplane> GetAllSmallAirplanes()
+        {
+            List<Airplane> smallAirplanes = new List<Airplane>();
+            foreach (Airplane a in airplanes)
+            {
+                if (a is SmallPlane)
+                    smallAirplanes.Add(a);
+            }
+            return smallAirplanes;
+        }
         public List<Airplane> GetAllAirplanes()
         {
             return airplanes;
         }
 
-        public void AddClient(string name, string surname, string pesel)
+        public void AddFlightAgent(string name, string idNumber)
         {
-            //Clients.Add(new PrivatePerson(name, surname, pesel));
-            //Clients.Add(new FlightAgent(name, idNumber));
+            clients.Add(new FlightAgent(name, idNumber));
+        }
+        public void AddPrivatePerson(string name, string surname, string pesel)
+        {
+            clients.Add(new PrivatePerson(name, surname, pesel));
         }
         public void RemoveClient(int i)
         {
@@ -68,9 +114,9 @@ namespace AirPlaneSystem
             return clients;
         }
 
-        public void AddFlight(int i, int y, Airport from, Airport to)
+        public void AddFlight(Airport from, Airport to, Airplane ap, DateTime date)
         {
-            flights.Add(new Flight(from = airports[i], to.airports[y].));
+            flights.Add(new Flight(from, to, ap, date));
         }
         public void RemoveFlight(int i)
         {

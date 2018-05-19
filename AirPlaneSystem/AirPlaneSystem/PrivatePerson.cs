@@ -8,15 +8,15 @@ namespace AirPlaneSystem
 {
     class PrivatePerson : Client
     {
-        private string Name
+        public string Name
         {
             get;
         }
-        private string Surname
+        public string Surname
         {
             get;
         }
-        private string Pesel
+        public string Pesel
         {
             get;
         }

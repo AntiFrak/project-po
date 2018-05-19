@@ -8,11 +8,11 @@ namespace AirPlaneSystem
 {
     class FlightAgent : Client
     {
-        private string Name
+        public string Name
         {
             get;
         }
-        private string IdNumber
+        public string IdNumber
         {
             get;
         }

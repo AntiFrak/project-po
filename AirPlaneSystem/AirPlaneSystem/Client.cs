@@ -6,13 +6,21 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    abstract class Client : Company
+    abstract class Client
     {
         private List<Flight> tickets = new List<Flight>();
 
-        public void BuyTicket(Flight f)
+        public void BuyTicket(Flight f, int seats)
         {
-            tickets.Add(f);
+            if (seats > f.Ap.Capacity)
+            {
+                Console.WriteLine("End of seats!!! Availble " + f.Ap.Capacity + " seats.");
+            }
+            else
+            {
+                tickets.Add(f);
+                f.Ap.Capacity--;
+            }
         }
 
         public void DeleteTicket(int i)

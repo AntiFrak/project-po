@@ -6,22 +6,32 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    class Airport : Company
+    class Airport
     {
-        private string Name
+        public string Name
         {
-            get { return Name; }
-            set { Name = value; }
+            get;
+            set;
         }
-        private double CoordX
+        public double CoordX
         {
             get { return CoordX; }
-            set { CoordX = value; }
+            set
+            {
+                if (CoordX < -500 || CoordX > 500)
+                    Console.WriteLine("Invalid coordination!!!");
+                else CoordX = value;
+            }
         }
-        private double CoordY
+        public double CoordY
         {
             get { return CoordY; }
-            set { CoordY = value; }
+            set
+            {
+                if (CoordY < -500 || CoordY > 500)
+                    Console.WriteLine("Invalid coordination!!!");
+                else CoordY = value;
+            }
         }
 
         public Airport(string name, double coordX, double coordY)

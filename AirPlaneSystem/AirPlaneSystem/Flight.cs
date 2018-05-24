@@ -6,28 +6,41 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    class Flight : Company
+    class Flight
     {
-        private Airport From 
+        public DateTime Date
         {
             get;
-            set;
         }
-        private Airport To 
+        public DateTime ArrivalDate
         {
             get;
-            set;
         }
-        public double GetDistans()
+        public Airport From 
         {
-            return Math.Sqrt(Math.Pow(From - toX, 2) + Math.Pow(fromY - toY, 2));
+            get;
+        }
+        public Airport To 
+        {
+            get;
+        }
+        public Airplane Ap
+        {
+            get;
+        }
+        public double Distans
+        {
+            get;
         }
 
-        public Flight(Airport from, Airport to)
+        public Flight(Airport from, Airport to, Airplane ap, DateTime date)
         {
             From = from;
             To = to;
-            GetDistans();
+            Ap = ap;
+            Date = date;
+            Distans = Math.Sqrt(Math.Pow(From.CoordX - To.CoordX, 2) + Math.Pow(From.CoordY - To.CoordY, 2));
+            ArrivalDate = Date.AddHours(Distans / 25); //sped= 25 m/h
         }
     }
 }

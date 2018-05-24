@@ -14,6 +14,6 @@ namespace AirPlaneSystem
             this.Id = id;
             this.MaxDistans = 1500d;
             this.Capacity = 300;
-        }//dkjjdkkjd
+        }
     }
 }

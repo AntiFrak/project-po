@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    abstract class Airplane : Company
+    abstract class Airplane
     {
-        protected string Name
+        public string Name
         {
             get;
             set;
         }
-        protected int Id
+        public int Id
         {
             get;
             set;
         }
-        protected int Capacity
+        public int Capacity
         {
             get;
             set;
         }
 
-        protected double MaxDistans
+        public double MaxDistans
         {
             get;
             set;

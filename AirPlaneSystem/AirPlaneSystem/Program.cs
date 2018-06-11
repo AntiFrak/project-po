@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AirPlaneSystem
 {
-    static class Program
+    class Program
     {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
-        [STAThread]
-        static void Main()
+         Company comp = new Company();
+        static void Main(string[] args)
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            MAIN main = new MAIN();
-            Application.Run(main);
+            Application.Run(new MAIN ());
+
+            Console.ReadKey();
         }
     }
 }

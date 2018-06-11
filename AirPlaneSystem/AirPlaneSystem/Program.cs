@@ -8,8 +8,10 @@ namespace AirPlaneSystem
 {
     class Program
     {
+         Company comp = new Company();
         static void Main(string[] args)
         {
+            Console.ReadKey();
         }
     }
 }

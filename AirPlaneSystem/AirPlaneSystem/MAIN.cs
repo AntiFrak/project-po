@@ -12,19 +12,22 @@ namespace AirPlaneSystem
 {
     public partial class MAIN : Form
     {
+        
         public MAIN()
         {
             InitializeComponent();
+          
         }
 
-        private void MAIN_Load(object sender, EventArgs e)
+        public void MAIN_Load(object sender, EventArgs e)
         {
-
+  
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            AIRPORTS air = new AIRPORTS();
+            air.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

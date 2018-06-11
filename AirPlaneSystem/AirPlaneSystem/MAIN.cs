@@ -27,12 +27,15 @@ namespace AirPlaneSystem
         private void button1_Click(object sender, EventArgs e)
         {
             AIRPORTS air = new AIRPORTS();
+            this.Hide();
             air.Show();
+        
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Planes pla = new Planes();
+            pla.Show();
         }
     }
 }

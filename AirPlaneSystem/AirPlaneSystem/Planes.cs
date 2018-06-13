@@ -56,12 +56,15 @@ namespace AirPlaneSystem
 
         private void AddPlane_Click(object sender, EventArgs e)
         {
+            Comp.AddAirplane(NamePlane.Text, Convert.ToInt32(ID.Text), Convert.ToInt32(TypePlane.SelectedIndex));
+            list.Items.Add(NamePlane.Text);
 
         }
 
         private void RemovePlane_Click(object sender, EventArgs e)
         {
-
+            Comp.AddAirplane(NamePlane.Text, Convert.ToInt32(ID.Text), Convert.ToInt32(TypePlane.SelectedIndex));
+            list.Items.Remove(NamePlane.Text);
         }
     }
 }

@@ -31,5 +31,10 @@ namespace AirPlaneSystem
         {
 
         }
+
+        private void AIRPORTS_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

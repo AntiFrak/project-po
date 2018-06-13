@@ -29,81 +29,81 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MAIN));
-            this.Airports = new System.Windows.Forms.Button();
-            this.Planes = new System.Windows.Forms.Button();
-            this.Flight = new System.Windows.Forms.Button();
-            this.Clients = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Airports
+            // button1
             // 
-            this.Airports.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Airports.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Airports.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Airports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Airports.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Airports.Location = new System.Drawing.Point(69, 41);
-            this.Airports.Name = "Airports";
-            this.Airports.Size = new System.Drawing.Size(157, 45);
-            this.Airports.TabIndex = 0;
-            this.Airports.Text = "Airports";
-            this.Airports.UseVisualStyleBackColor = false;
-            this.Airports.Click += new System.EventHandler(this.Airports_Click);
+            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(69, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 45);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Airports";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Planes
+            // button2
             // 
-            this.Planes.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Planes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Planes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Planes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Planes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Planes.Location = new System.Drawing.Point(378, 41);
-            this.Planes.Name = "Planes";
-            this.Planes.Size = new System.Drawing.Size(157, 45);
-            this.Planes.TabIndex = 1;
-            this.Planes.Text = "Planes";
-            this.Planes.UseVisualStyleBackColor = false;
-            this.Planes.Click += new System.EventHandler(this.Planes_Click);
+            this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(378, 41);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(157, 45);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Planes";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Flight
+            // button3
             // 
-            this.Flight.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Flight.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Flight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Flight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Flight.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Flight.Location = new System.Drawing.Point(69, 128);
-            this.Flight.Name = "Flight";
-            this.Flight.Size = new System.Drawing.Size(157, 45);
-            this.Flight.TabIndex = 2;
-            this.Flight.Text = "Flights";
-            this.Flight.UseVisualStyleBackColor = false;
-            this.Flight.Click += new System.EventHandler(this.Flight_Click);
+            this.button3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Location = new System.Drawing.Point(69, 128);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(157, 45);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Flights";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Clients
+            // button4
             // 
-            this.Clients.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Clients.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Clients.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Clients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clients.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Clients.Location = new System.Drawing.Point(378, 128);
-            this.Clients.Name = "Clients";
-            this.Clients.Size = new System.Drawing.Size(157, 45);
-            this.Clients.TabIndex = 3;
-            this.Clients.Text = "Clients";
-            this.Clients.UseVisualStyleBackColor = false;
-            this.Clients.Click += new System.EventHandler(this.Clients_Click);
+            this.button4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Location = new System.Drawing.Point(378, 128);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(157, 45);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Clients";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // MAIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 353);
-            this.Controls.Add(this.Clients);
-            this.Controls.Add(this.Flight);
-            this.Controls.Add(this.Planes);
-            this.Controls.Add(this.Airports);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MAIN";
@@ -115,9 +115,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Airports;
-        private System.Windows.Forms.Button Planes;
-        private System.Windows.Forms.Button Flight;
-        private System.Windows.Forms.Button Clients;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -12,8 +12,6 @@ namespace AirPlaneSystem
 {
     public partial class AIRPORTS : Form
     {
-         
-
         public AIRPORTS()
         {
             InitializeComponent();
@@ -21,7 +19,7 @@ namespace AirPlaneSystem
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string name = Console.ReadLine();
+
         }
 
         private void button2_Click(object sender, EventArgs e)

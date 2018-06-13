@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FLIGHTS));
-            this.listView = new System.Windows.Forms.ListView();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.No = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.From = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.To = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -39,17 +39,17 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.fTo = new System.Windows.Forms.TextBox();
-            this.fFrom = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Date = new System.Windows.Forms.Label();
-            this.SelestPlane = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView
+            // listView1
             // 
-            this.listView.AllowDrop = true;
-            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView1.AllowDrop = true;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.No,
             this.From,
             this.To,
@@ -57,13 +57,13 @@
             this.Plane,
             this.DepDate,
             this.columnHeader1});
-            this.listView.Location = new System.Drawing.Point(23, 26);
-            this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(585, 182);
-            this.listView.TabIndex = 0;
-            this.listView.UseCompatibleStateImageBehavior = false;
-            this.listView.View = System.Windows.Forms.View.Details;
-            this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged_1);
+            this.listView1.Location = new System.Drawing.Point(23, 26);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(585, 182);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
             // 
             // No
             // 
@@ -118,21 +118,21 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "From";
             // 
-            // fTo
+            // textBox1
             // 
-            this.fTo.Location = new System.Drawing.Point(147, 270);
-            this.fTo.Name = "fTo";
-            this.fTo.Size = new System.Drawing.Size(100, 22);
-            this.fTo.TabIndex = 3;
-            this.fTo.TextChanged += new System.EventHandler(this.fTo_TextChanged);
+            this.textBox1.Location = new System.Drawing.Point(147, 270);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // fFrom
+            // textBox2
             // 
-            this.fFrom.Location = new System.Drawing.Point(23, 270);
-            this.fFrom.Name = "fFrom";
-            this.fFrom.Size = new System.Drawing.Size(100, 22);
-            this.fFrom.TabIndex = 4;
-            this.fFrom.TextChanged += new System.EventHandler(this.fFrom_TextChanged);
+            this.textBox2.Location = new System.Drawing.Point(23, 270);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 4;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // dateTimePicker1
             // 
@@ -151,29 +151,28 @@
             this.Date.Text = "Date";
             this.Date.Click += new System.EventHandler(this.Date_Click);
             // 
-            // SelestPlane
+            // button1
             // 
-            this.SelestPlane.Location = new System.Drawing.Point(493, 306);
-            this.SelestPlane.Name = "SelestPlane";
-            this.SelestPlane.Size = new System.Drawing.Size(115, 35);
-            this.SelestPlane.TabIndex = 7;
-            this.SelestPlane.Text = "Select a plane";
-            this.SelestPlane.UseVisualStyleBackColor = true;
-            this.SelestPlane.Click += new System.EventHandler(this.SelestPlane_Click);
+            this.button1.Location = new System.Drawing.Point(493, 306);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 35);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Select a plane";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FLIGHTS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 353);
-            this.Controls.Add(this.SelestPlane);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Date);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.fFrom);
-            this.Controls.Add(this.fTo);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView);
+            this.Controls.Add(this.listView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FLIGHTS";
             this.Text = "Flights";
@@ -185,7 +184,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader No;
         private System.Windows.Forms.ColumnHeader From;
         private System.Windows.Forms.ColumnHeader To;
@@ -195,10 +194,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox fTo;
-        private System.Windows.Forms.TextBox fFrom;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label Date;
-        private System.Windows.Forms.Button SelestPlane;
+        private System.Windows.Forms.Button button1;
     }
 }

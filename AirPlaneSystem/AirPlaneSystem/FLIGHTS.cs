@@ -22,17 +22,23 @@ namespace AirPlaneSystem
 
         }
 
-        private void listView_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+          
+        }
+
+        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
 
-        private void fFrom_TextChanged(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void fTo_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -46,10 +52,6 @@ namespace AirPlaneSystem
         {
             
         }
-
-        private void SelestPlane_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -21,18 +21,17 @@ namespace AirPlaneSystem
 
         public void MAIN_Load(object sender, EventArgs e)
         {
-             
+  
         }
 
-        private void Airports_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             AIRPORTS air = new AIRPORTS();
             this.Hide();
             air.Show();
-           
         }
 
-        private void Planes_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             
             Planes pla = new Planes();
@@ -40,14 +39,14 @@ namespace AirPlaneSystem
             pla.Show();
         }
 
-        private void Flight_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             FLIGHTS fli = new FLIGHTS();
             this.Hide();
             fli.Show();
         }
 
-        private void Clients_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             Clients clients = new Clients();
             this.Hide();

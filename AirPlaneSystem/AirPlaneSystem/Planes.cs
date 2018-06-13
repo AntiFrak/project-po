@@ -17,17 +17,17 @@ namespace AirPlaneSystem
             InitializeComponent();
         }
 
-        private void NamePlane_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void ID_TextChanged(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void MaxDistans_TextChanged(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -37,27 +37,7 @@ namespace AirPlaneSystem
 
         }
 
-        private void list_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Capacity_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TypePlane_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddPlane_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RemovePlane_Click(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

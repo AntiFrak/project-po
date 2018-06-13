@@ -138,6 +138,7 @@
             this.MaximizeBox = false;
             this.Name = "AIRPORTS";
             this.Text = "Airports";
+            this.Load += new System.EventHandler(this.AIRPORTS_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

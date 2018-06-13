@@ -29,11 +29,11 @@ namespace AirPlaneSystem
             AIRPORTS air = new AIRPORTS();
             this.Hide();
             air.Show();
-        
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             Planes pla = new Planes();
             this.Hide();
             pla.Show();
@@ -41,7 +41,16 @@ namespace AirPlaneSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
+            FLIGHTS fli = new FLIGHTS();
+            this.Hide();
+            fli.Show();
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Clients clients = new Clients();
+            this.Hide();
+            clients.Show();
         }
     }
 }

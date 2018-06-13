@@ -257,6 +257,7 @@
             this.MaximizeBox = false;
             this.Name = "Clients";
             this.Text = "Clients";
+            this.Load += new System.EventHandler(this.Clients_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

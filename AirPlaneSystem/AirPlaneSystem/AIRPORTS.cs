@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AirPlaneSystem
 {
-    public partial class AIRPORTS : Form
+    public partial class AIRPORTS : Form 
     {
         public AIRPORTS()
         {
@@ -28,6 +28,11 @@ namespace AirPlaneSystem
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

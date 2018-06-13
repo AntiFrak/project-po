@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace AirPlaneSystem
 {
+    //jsdgfugfis
     public partial class AIRPORTS : Form
     {
          
@@ -35,6 +36,11 @@ namespace AirPlaneSystem
         }
 
         private void AIRPORTS_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

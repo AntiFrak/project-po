@@ -12,6 +12,8 @@ namespace AirPlaneSystem
 {
     public partial class Planes : Form
     {
+        private Company comp = new Company();
+        internal Company Comp { get => comp; set => value = comp; }
         public Planes()
         {
             InitializeComponent();

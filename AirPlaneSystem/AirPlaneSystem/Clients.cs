@@ -12,6 +12,8 @@ namespace AirPlaneSystem
 {
     public partial class Clients : Form
     {
+        private Company comp = new Company();
+        internal Company Comp { get => comp; set => value = comp; }
         public Clients()
         {
             InitializeComponent();
@@ -40,7 +42,8 @@ namespace AirPlaneSystem
 
         private void AddPerson_Click(object sender, EventArgs e)
         {
-
+            Comp.AddPrivatePerson(NamePerson.Text, Surname.Text, PESEL.Text);
+            list1.Items.Add(Surname.Text);
         }
 
         private void Clients_Load(object sender, EventArgs e)
@@ -75,7 +78,8 @@ namespace AirPlaneSystem
 
         private void AddAgency_Click(object sender, EventArgs e)
         {
-
+            Comp.AddFlightAgent(NameAgency.Text, ID.Text);
+            list2.Items.Add(NameAgency.Text);
         }
 
         private void RemoveAgency_Click(object sender, EventArgs e)

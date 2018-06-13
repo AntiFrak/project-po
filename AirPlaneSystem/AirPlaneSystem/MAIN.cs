@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AirPlaneSystem
 {
-    //alallfsnddn
     public partial class MAIN : Form
     {
+        Company comp = new Company();
         
         public MAIN()
         {

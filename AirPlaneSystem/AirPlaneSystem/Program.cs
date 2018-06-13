@@ -9,9 +9,9 @@ namespace AirPlaneSystem
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
-            Company comp = new Company();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MAIN ());

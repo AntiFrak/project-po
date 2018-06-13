@@ -47,5 +47,11 @@ namespace AirPlaneSystem
         {
 
         }
+
+        private void FLIGHTS_Load(object sender, EventArgs e)
+        {
+            
+        }
+        
     }
 }

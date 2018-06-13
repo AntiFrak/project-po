@@ -10,6 +10,7 @@ namespace AirPlaneSystem
     class Program
     {
          Company comp = new Company();
+        [STAThread]
         static void Main(string[] args)
         {
 

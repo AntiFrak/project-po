@@ -49,7 +49,7 @@ namespace AirPlaneSystem
 
         private void SelestPlane_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

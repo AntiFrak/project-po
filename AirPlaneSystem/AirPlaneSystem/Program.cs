@@ -10,6 +10,7 @@ namespace AirPlaneSystem
     class Program
     {
          Company comp = new Company();
+        [STAThread]
         static void Main(string[] args)
         {
 
@@ -17,7 +18,7 @@ namespace AirPlaneSystem
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MAIN ());
 
-             
+          
         }
     }
 }

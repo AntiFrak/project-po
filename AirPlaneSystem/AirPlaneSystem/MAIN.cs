@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace AirPlaneSystem
 {
-    //alallfsnddn
     public partial class MAIN : Form
     {
-        
+        Company comp = new Company();
+
         public MAIN()
         {
             InitializeComponent();
@@ -28,6 +28,7 @@ namespace AirPlaneSystem
         private void Airports_Click(object sender, EventArgs e)
         {
             AIRPORTS air = new AIRPORTS();
+            air.Comp = this.comp;
             this.Hide();
             air.Show();
            

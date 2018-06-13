@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace AirPlaneSystem
 {
-    //jsdgfugfis
     public partial class AIRPORTS : Form
     {
-         
+        private Company comp = new Company();
+
+        internal Company Comp { get => comp; set => value = comp; }
 
         public AIRPORTS()
         {
@@ -32,7 +33,8 @@ namespace AirPlaneSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Comp.AddAirports(textBox1.Text, Convert.ToDouble(textBox2.Text), Convert.ToDouble(textBox3.Text));
+            listBox1.Items.Add(textBox1.Text);
         }
 
         private void AIRPORTS_Load(object sender, EventArgs e)

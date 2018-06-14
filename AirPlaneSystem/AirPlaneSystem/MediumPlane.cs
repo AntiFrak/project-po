@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    class MediumPlane : Airplane
+    public class MediumPlane : Airplane
     {
         public MediumPlane(string name, int id)
         {

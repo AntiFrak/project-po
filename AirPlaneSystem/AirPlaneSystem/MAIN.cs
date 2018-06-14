@@ -10,14 +10,15 @@ using System.Windows.Forms;
 
 namespace AirPlaneSystem
 {
-    public partial class MAIN : Form
+     partial class MAIN : Form
     {
         Company comp = new Company();
 
         public MAIN()
         {
             InitializeComponent();
-          
+            comp.AddAirplane("Boing", 747, 0);
+            comp.AddAirports("Dresden", 1d, 1d);
         }
 
         public void MAIN_Load(object sender, EventArgs e)
@@ -25,11 +26,11 @@ namespace AirPlaneSystem
              
         }
 
-        private void Airports_Click(object sender, EventArgs e)
+        internal void Airports_Click(object sender, EventArgs e)
         {
             AIRPORTS air = new AIRPORTS();
-            air.Comp = this.comp;
-            this.Hide();
+            air.setCompany(comp);
+            //this.Hide();
             air.Show();
            
         }
@@ -38,21 +39,24 @@ namespace AirPlaneSystem
         {
             
             Planes pla = new Planes();
-            this.Hide();
+            pla.setCompany(comp);
+            //this.Hide();
             pla.Show();
         }
 
         private void Flight_Click(object sender, EventArgs e)
         {
             FLIGHTS fli = new FLIGHTS();
-            this.Hide();
+            fli.setCompany(comp);
+            //this.Hide();
             fli.Show();
         }
 
         private void Clients_Click(object sender, EventArgs e)
         {
             Clients clients = new Clients();
-            this.Hide();
+            clients.setCompany(comp);
+            //this.Hide();
             clients.Show();
         }
     }

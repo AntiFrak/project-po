@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    abstract class Client
+    public abstract class Client
     {
         private List<Flight> tickets = new List<Flight>();
 

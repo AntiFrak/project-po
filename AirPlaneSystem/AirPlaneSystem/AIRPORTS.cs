@@ -12,29 +12,36 @@ namespace AirPlaneSystem
 {
     public partial class AIRPORTS : Form
     {
-        private Company comp = new Company();
-
-        internal Company Comp { get => comp; set => value = comp; }
-
+        Company comp;
         public AIRPORTS()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public void setCompany(Company c)
+        {
+            comp = c;
+            foreach (Airport a in comp.GetAllAirports())
+            {
+                list.Items.Add(a.Name);
+            }
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
         {
             string name = Console.ReadLine();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void remove_Click(object sender, EventArgs e)
         {
-
+            comp.RemoveAirports(list.SelectedIndex);
+            list.Items.Remove(list.SelectedItem);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void add_Click(object sender, EventArgs e)
         {
-            Comp.AddAirports(textBox1.Text, Convert.ToDouble(textBox2.Text), Convert.ToDouble(textBox3.Text));
-            listBox1.Items.Add(textBox1.Text);
+            comp.AddAirports(name.Text, Convert.ToDouble(coordX.Text), Convert.ToDouble(coordY.Text));
+            list.Items.Add(name.Text);
         }
 
         private void AIRPORTS_Load(object sender, EventArgs e)
@@ -42,7 +49,7 @@ namespace AirPlaneSystem
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void list_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

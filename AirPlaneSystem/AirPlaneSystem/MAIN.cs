@@ -13,6 +13,7 @@ namespace AirPlaneSystem
      partial class MAIN : Form
     {
         Company comp = new Company();
+        SaveState save = new SaveState();
 
         public MAIN()
         { 
@@ -82,6 +83,12 @@ namespace AirPlaneSystem
         public void mainShow()
         {
             this.Show();
+        }
+
+        private void Saver_Click(object sender, EventArgs e)
+        {
+            SaveState.saveToDrive(comp, "SaveData");
+            MessageBox.Show("DONE!!!");
         }
     }
 }

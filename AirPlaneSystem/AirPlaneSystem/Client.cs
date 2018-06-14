@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    abstract class Client
+    public abstract class Client
     {
         private List<Flight> tickets = new List<Flight>();
 
@@ -19,7 +19,7 @@ namespace AirPlaneSystem
             else
             {
                 tickets.Add(f);
-                f.Ap.Capacity--;
+                f.Ap.Capacity-= seats;
             }
         }
 

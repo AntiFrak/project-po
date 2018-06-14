@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    class Flight
+    public class Flight
     {
         public DateTime Date
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    class Company
+    public class Company
     {
         private List<Airplane> airplanes = new List<Airplane>();
         private List<Airport> airports = new List<Airport>(); 
@@ -35,13 +35,13 @@ namespace AirPlaneSystem
         {
             switch (type) // choise a type of airplane
             {
-                case 1:
+                case 0:
                     airplanes.Add(new BigPlane(name, id));
                     break;
-                case 2:
+                case 1:
                     airplanes.Add(new MediumPlane(name, id));
                     break;
-                case 3:
+                case 2:
                     airplanes.Add(new SmallPlane(name, id));
                     break;
                 default:

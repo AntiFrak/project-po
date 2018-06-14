@@ -38,7 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.add = new System.Windows.Forms.Button();
             this.remove = new System.Windows.Forms.Button();
-            this.back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // list
@@ -130,21 +129,11 @@
             this.remove.UseVisualStyleBackColor = false;
             this.remove.Click += new System.EventHandler(this.remove_Click);
             // 
-            // back
-            // 
-            this.back.Location = new System.Drawing.Point(181, 257);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(75, 23);
-            this.back.TabIndex = 14;
-            this.back.Text = "back";
-            this.back.UseVisualStyleBackColor = true;
-            // 
             // AIRPORTS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 287);
-            this.Controls.Add(this.back);
             this.Controls.Add(this.remove);
             this.Controls.Add(this.add);
             this.Controls.Add(this.label3);
@@ -176,6 +165,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button remove;
-        private System.Windows.Forms.Button back;
     }
 }

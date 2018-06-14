@@ -42,14 +42,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TypePlane = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RemovePlane
             // 
             this.RemovePlane.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.RemovePlane.Location = new System.Drawing.Point(352, 251);
-            this.RemovePlane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RemovePlane.Margin = new System.Windows.Forms.Padding(2);
             this.RemovePlane.Name = "RemovePlane";
             this.RemovePlane.Size = new System.Drawing.Size(94, 28);
             this.RemovePlane.TabIndex = 17;
@@ -61,7 +60,7 @@
             // 
             this.AddPlane.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.AddPlane.Location = new System.Drawing.Point(352, 210);
-            this.AddPlane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddPlane.Margin = new System.Windows.Forms.Padding(2);
             this.AddPlane.Name = "AddPlane";
             this.AddPlane.Size = new System.Drawing.Size(94, 28);
             this.AddPlane.TabIndex = 16;
@@ -103,7 +102,7 @@
             // MaxDistans
             // 
             this.MaxDistans.Location = new System.Drawing.Point(166, 220);
-            this.MaxDistans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaxDistans.Margin = new System.Windows.Forms.Padding(2);
             this.MaxDistans.Name = "MaxDistans";
             this.MaxDistans.ReadOnly = true;
             this.MaxDistans.Size = new System.Drawing.Size(74, 20);
@@ -113,7 +112,7 @@
             // ID
             // 
             this.ID.Location = new System.Drawing.Point(132, 220);
-            this.ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ID.Margin = new System.Windows.Forms.Padding(2);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(31, 20);
             this.ID.TabIndex = 11;
@@ -122,7 +121,7 @@
             // NamePlane
             // 
             this.NamePlane.Location = new System.Drawing.Point(28, 220);
-            this.NamePlane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NamePlane.Margin = new System.Windows.Forms.Padding(2);
             this.NamePlane.Name = "NamePlane";
             this.NamePlane.Size = new System.Drawing.Size(100, 20);
             this.NamePlane.TabIndex = 10;
@@ -132,7 +131,7 @@
             // 
             this.list.FormattingEnabled = true;
             this.list.Location = new System.Drawing.Point(28, 6);
-            this.list.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.list.Margin = new System.Windows.Forms.Padding(2);
             this.list.Name = "list";
             this.list.Size = new System.Drawing.Size(100, 173);
             this.list.TabIndex = 9;
@@ -141,7 +140,7 @@
             // Capacity
             // 
             this.Capacity.Location = new System.Drawing.Point(244, 220);
-            this.Capacity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Capacity.Margin = new System.Windows.Forms.Padding(2);
             this.Capacity.Name = "Capacity";
             this.Capacity.ReadOnly = true;
             this.Capacity.Size = new System.Drawing.Size(74, 20);
@@ -166,7 +165,7 @@
             "Medium plane",
             "Small plane"});
             this.TypePlane.Location = new System.Drawing.Point(28, 257);
-            this.TypePlane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TypePlane.Margin = new System.Windows.Forms.Padding(2);
             this.TypePlane.Name = "TypePlane";
             this.TypePlane.Size = new System.Drawing.Size(92, 21);
             this.TypePlane.TabIndex = 20;
@@ -182,22 +181,11 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Type of plane";
             // 
-            // back
-            // 
-            this.back.Location = new System.Drawing.Point(184, 254);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(75, 23);
-            this.back.TabIndex = 22;
-            this.back.Text = "back";
-            this.back.UseVisualStyleBackColor = true;
-            this.back.Click += new System.EventHandler(this.back_Click);
-            // 
             // Planes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 287);
-            this.Controls.Add(this.back);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TypePlane);
             this.Controls.Add(this.label4);
@@ -212,7 +200,7 @@
             this.Controls.Add(this.NamePlane);
             this.Controls.Add(this.list);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Planes";
             this.Text = "Planes";
@@ -236,6 +224,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox TypePlane;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button back;
     }
 }

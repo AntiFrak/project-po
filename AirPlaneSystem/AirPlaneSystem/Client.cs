@@ -19,7 +19,7 @@ namespace AirPlaneSystem
             else
             {
                 tickets.Add(f);
-                f.Ap.Capacity--;
+                f.Ap.Capacity-= seats;
             }
         }
 

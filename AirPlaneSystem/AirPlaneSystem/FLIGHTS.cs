@@ -25,14 +25,26 @@ namespace AirPlaneSystem
 
         public void setCompany(Company c)
         {
+            try { 
             comp = c;
             foreach (Airport a in comp.GetAllAirports())
             {
-                fromList.Items.Add(a);
-                toList.Items.Add(a);
+                fromList.Items.Add(a.Name);
+                toList.Items.Add(a.Name);
+            }
+            foreach (Flight f in comp.GetAllFlights())
+            {
+                ListViewItem fli = new ListViewItem(new string[] { Text = f.From.Name, f.To.Name, f.Ap.Capacity.ToString(), f.Ap.Name, f.Date.ToString(), f.ArrivalDate.ToString() });
+                listView.Items.Add(fli);
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
             }
         }
-        
+
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -56,7 +68,7 @@ namespace AirPlaneSystem
 
         private void Date_Click(object sender, EventArgs e)
         {
-            date = dateTimePicker1.Value;
+
         }
 
         private void FLIGHTS_Load(object sender, EventArgs e)
@@ -66,62 +78,107 @@ namespace AirPlaneSystem
 
         private void SelestPlane_Click(object sender, EventArgs e)
         {
-            Distans = (Math.Sqrt(Math.Pow(FromA.CoordX - ToA.CoordX, 2) + Math.Pow(FromA.CoordY - ToA.CoordY, 2)));
-            dateAr = date.AddHours(Distans / 25);
-            if (Distans > 749)
+            try
             {
-                foreach (Airplane a in comp.GetAllBigAirplanes())
+                listPlanes.Enabled = true;
+                Distans = (Math.Sqrt(Math.Pow(FromA.CoordX - ToA.CoordX, 2) + Math.Pow(FromA.CoordY - ToA.CoordY, 2)));
+                dateAr = date.AddHours(Distans / 25);
+                if (Distans > 749)
                 {
-                    listPlanes.Items.Add(a);
-                }
-            }
-            else
-            {
-                if (Distans > 399 && Distans < 750)
-                {
-                    foreach (Airplane a in comp.GetAllMediumAirplanes())
+                    foreach (Airplane a in comp.GetAllBigAirplanes())
                     {
-                        listPlanes.Items.Add(a);
+                        listPlanes.Items.Add(a.Name + " [ID:" + a.Id + "]");
                     }
                 }
                 else
                 {
-                    if (Distans < 400)
+                    if (Distans > 399 && Distans < 750)
                     {
-                        foreach (Airplane a in comp.GetAllSmallAirplanes())
+                        foreach (Airplane a in comp.GetAllMediumAirplanes())
                         {
-                            listPlanes.Items.Add(a);
+                            listPlanes.Items.Add(a.Name + " [ID:" + a.Id + "]");
+                        }
+                    }
+                    else
+                    {
+                        if (Distans < 400)
+                        {
+                            foreach (Airplane a in comp.GetAllSmallAirplanes())
+                            {
+                                listPlanes.Items.Add(a.Name + " [ID:" + a.Id + "]");
+                            }
                         }
                     }
                 }
+            }
+            catch ( Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
             }
         }
 
         private void toList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try { 
             if (FromA != comp.GetAirport(toList.SelectedIndex))
                 ToA = comp.GetAirport(toList.SelectedIndex);
             else
             {
-                MessageBox.Show("ERROR!!!");
+                MessageBox.Show("Select other destination!");
+                return;
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
                 return;
             }
         }
 
         private void create_Click(object sender, EventArgs e)
         {
+            try { 
             comp.AddFlight(FromA, ToA, ap, date);
-            ListViewItem item = new ListViewItem { Text = FromA.Name };
-            item.SubItems.Add(ToA.Name);
-            item.SubItems.Add(ap.Capacity.ToString());
-            item.SubItems.Add(ap.Name);
-            item.SubItems.Add(date.ToShortDateString());
-            item.SubItems.Add(dateAr.ToShortDateString());
+            ListViewItem fli = new ListViewItem(new string[] { Text = FromA.Name, ToA.Name, ap.Capacity.ToString(), ap.Name, date.ToString(), dateAr.ToString() });
+            listView.Items.Add(fli);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
         }
 
         private void listPlanes_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try { 
             ap = comp.GetAirplane(listPlanes.SelectedIndex);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        { try { 
+            if (dateTimePicker1.Value < DateTime.Now)
+            {
+                throw new Exception("Select correct date");
+            }
+            else
+            {
+                date = dateTimePicker1.Value;
+                SelestPlane.Enabled = true;
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
         }
 
         private void abort_Click(object sender, EventArgs e)
@@ -131,7 +188,14 @@ namespace AirPlaneSystem
 
         private void fromList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try { 
             FromA = comp.GetAirport(fromList.SelectedIndex);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
         }
     }
 }

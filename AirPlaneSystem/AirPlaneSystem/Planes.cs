@@ -18,11 +18,17 @@ namespace AirPlaneSystem
             InitializeComponent();            
         }
         public void setCompany(Company c)
-        {
+        { try { 
             comp = c;
             foreach (Airplane a in comp.GetAllAirplanes())
             {
                 list.Items.Add(a.Name + " [ID:" + a.Id + "]");
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
             }
         }
 
@@ -57,7 +63,7 @@ namespace AirPlaneSystem
         }
 
         private void TypePlane_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        { try { 
             switch (TypePlane.SelectedIndex) // choise a type of airplane
             {
                 case 0:
@@ -76,19 +82,40 @@ namespace AirPlaneSystem
                     Console.WriteLine("Unknown airplane type!!!");
                     break;
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
         }
 
         private void AddPlane_Click(object sender, EventArgs e)
-        {
-            comp.AddAirplane(NamePlane.Text, Convert.ToInt32(ID.Text), Convert.ToInt32(TypePlane.SelectedIndex));
+        { try {
+                if (Convert.ToInt32(ID.Text) < 1)
+                {
+                    throw new Exception("Invalid ID");
+                }
+                comp.AddAirplane(NamePlane.Text, Convert.ToInt32(ID.Text), Convert.ToInt32(TypePlane.SelectedIndex));
             list.Items.Add(NamePlane.Text +  " [ID:" + ID.Text + "]");
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
         }
 
         private void RemovePlane_Click(object sender, EventArgs e)
-        {
+        { try { 
             comp.RemoveAirplane(list.SelectedIndex);
             list.Items.Remove(list.SelectedItem);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
         }
 
         private void back_Click(object sender, EventArgs e)

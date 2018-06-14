@@ -20,16 +20,24 @@ namespace AirPlaneSystem
 
         public void setCompany(Company c)
         {
-            comp = c;
-            foreach (Airport a in comp.GetAllAirports())
+            try
             {
-                list.Items.Add(a.Name);
+                comp = c;
+                foreach (Airport a in comp.GetAllAirports())
+                {
+                    list.Items.Add(a.Name);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
             }
         }
 
         private void name_TextChanged(object sender, EventArgs e)
         {
-            string name = Console.ReadLine();
+
         }
 
         private void remove_Click(object sender, EventArgs e)
@@ -40,8 +48,16 @@ namespace AirPlaneSystem
 
         private void add_Click(object sender, EventArgs e)
         {
-            comp.AddAirports(name.Text, Convert.ToDouble(coordX.Text), Convert.ToDouble(coordY.Text));
-            list.Items.Add(name.Text);
+            try
+            {
+                comp.AddAirports(name.Text, Convert.ToDouble(coordX.Text), Convert.ToDouble(coordY.Text));
+                list.Items.Add(name.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
         }
 
         private void AIRPORTS_Load(object sender, EventArgs e)

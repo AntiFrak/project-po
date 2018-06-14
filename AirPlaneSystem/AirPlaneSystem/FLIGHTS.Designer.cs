@@ -45,8 +45,6 @@
             this.toList = new System.Windows.Forms.ComboBox();
             this.listPlanes = new System.Windows.Forms.ComboBox();
             this.create = new System.Windows.Forms.Button();
-            this.abort = new System.Windows.Forms.Button();
-            this.back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView
@@ -60,7 +58,7 @@
             this.DepDate,
             this.columnHeader1});
             this.listView.Location = new System.Drawing.Point(18, 20);
-            this.listView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView.Margin = new System.Windows.Forms.Padding(2);
             this.listView.Name = "listView";
             this.listView.Size = new System.Drawing.Size(607, 149);
             this.listView.TabIndex = 0;
@@ -71,22 +69,22 @@
             // From
             // 
             this.From.Text = "From";
-            this.From.Width = 64;
+            this.From.Width = 79;
             // 
             // To
             // 
             this.To.Text = "To";
-            this.To.Width = 67;
+            this.To.Width = 77;
             // 
             // Seats
             // 
             this.Seats.Text = "Available seats";
-            this.Seats.Width = 108;
+            this.Seats.Width = 83;
             // 
             // Plane
             // 
             this.Plane.Text = "Plane";
-            this.Plane.Width = 76;
+            this.Plane.Width = 118;
             // 
             // DepDate
             // 
@@ -121,10 +119,11 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(205, 218);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 5;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // Date
             // 
@@ -139,8 +138,9 @@
             // 
             // SelestPlane
             // 
+            this.SelestPlane.Enabled = false;
             this.SelestPlane.Location = new System.Drawing.Point(370, 216);
-            this.SelestPlane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SelestPlane.Margin = new System.Windows.Forms.Padding(2);
             this.SelestPlane.Name = "SelestPlane";
             this.SelestPlane.Size = new System.Drawing.Size(86, 23);
             this.SelestPlane.TabIndex = 7;
@@ -168,11 +168,13 @@
             // 
             // listPlanes
             // 
+            this.listPlanes.Enabled = false;
             this.listPlanes.FormattingEnabled = true;
             this.listPlanes.Location = new System.Drawing.Point(476, 216);
             this.listPlanes.Name = "listPlanes";
             this.listPlanes.Size = new System.Drawing.Size(103, 21);
             this.listPlanes.TabIndex = 10;
+            this.listPlanes.Text = "Planes:";
             this.listPlanes.SelectedIndexChanged += new System.EventHandler(this.listPlanes_SelectedIndexChanged);
             // 
             // create
@@ -185,32 +187,11 @@
             this.create.UseVisualStyleBackColor = true;
             this.create.Click += new System.EventHandler(this.create_Click);
             // 
-            // abort
-            // 
-            this.abort.Location = new System.Drawing.Point(423, 252);
-            this.abort.Name = "abort";
-            this.abort.Size = new System.Drawing.Size(75, 23);
-            this.abort.TabIndex = 12;
-            this.abort.Text = "Abort";
-            this.abort.UseVisualStyleBackColor = true;
-            this.abort.Click += new System.EventHandler(this.abort_Click);
-            // 
-            // back
-            // 
-            this.back.Location = new System.Drawing.Point(205, 252);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(75, 23);
-            this.back.TabIndex = 13;
-            this.back.Text = "back";
-            this.back.UseVisualStyleBackColor = true;
-            // 
             // FLIGHTS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 287);
-            this.Controls.Add(this.back);
-            this.Controls.Add(this.abort);
             this.Controls.Add(this.create);
             this.Controls.Add(this.listPlanes);
             this.Controls.Add(this.toList);
@@ -222,7 +203,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FLIGHTS";
             this.Text = "Flights";
             this.Load += new System.EventHandler(this.FLIGHTS_Load);
@@ -249,7 +230,5 @@
         private System.Windows.Forms.ComboBox toList;
         private System.Windows.Forms.ComboBox listPlanes;
         private System.Windows.Forms.Button create;
-        private System.Windows.Forms.Button abort;
-        private System.Windows.Forms.Button back;
     }
 }

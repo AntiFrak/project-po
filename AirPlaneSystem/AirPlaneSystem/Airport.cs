@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace AirPlaneSystem
 {
-    class Airport
+    public class Airport
     {
+        private double coordX, coordY;
         public string Name
         {
             get;
@@ -15,22 +16,22 @@ namespace AirPlaneSystem
         }
         public double CoordX
         {
-            get { return CoordX; }
+            get { return coordX; }
             set
             {
                 if (CoordX < -500 || CoordX > 500)
-                    Console.WriteLine("Invalid coordination!!!");
-                else CoordX = value;
+                    coordX = 0;
+                else coordX = value;
             }
         }
         public double CoordY
         {
-            get { return CoordY; }
+            get { return coordY; }
             set
             {
                 if (CoordY < -500 || CoordY > 500)
-                    Console.WriteLine("Invalid coordination!!!");
-                else CoordY = value;
+                    coordY = 0;
+                else coordY = value;
             }
         }
 
